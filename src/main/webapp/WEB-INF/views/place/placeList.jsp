@@ -14,19 +14,19 @@
     <input type="hidden" id="page" name="page" value="">
     <div class="container">
         <div class="row">
-
+            <c:forEach var="list" items="${list}">
                 <div class="col-sm-4">
                     <div class="thumbnail">
                         <div class="caption">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <div>${list.no}</div>
+                            <div>${list.name}</div>
+                            <div>${list.subject}</div>
                         </div>
                     </div>
                 </div>
-
+            </c:forEach>
+            <button type="button" class="btn btn-default" id="btnDetail">글 작성</button>
         </div>
+
     </div>
-    <button type="button" class="btn btn-default" id="btnDetail">글 작성</button>
 </form>
